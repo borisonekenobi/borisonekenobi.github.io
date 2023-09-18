@@ -2,10 +2,11 @@
     font-family: JetBrains Mono;
     font-size: 22px;
     --main-fg-color: #d7d7d7;
+    --main-bg-color: #1f1f1f;
 }
 
 body {
-    background-color: #1F1F1F;
+    background-color: var(--main-bg-color)
 }
 
 .topnav {
@@ -133,12 +134,13 @@ body {
     align-items: center;
     margin: 25px;
     color: var(--main-fg-color);
-    font-size: 15px;
+    font-size: 18px;
+    line-height: 2;
 }
 
 .project img {
     width: 40%;
-    height: auto;
+    height: 100%;
     margin: 25px;
 }
 
@@ -170,4 +172,24 @@ body {
 .contactBtn:hover {
     background-color: #D40000;
     color: var(--main-fg-color);
+}
+
+.easterEggText {
+    color: var(--main-bg-color);
+}
+
+.easterEggText:hover {
+    color: var(--main-fg-color);
+}
+
+.minikit {
+    display: block;
+    margin-left: auto;
+    margin-right: calc(50% - 50px);
+    width: fit-content;
+    height: fit-content;
+}
+
+.minikitImg {
+    width: 50;
 }

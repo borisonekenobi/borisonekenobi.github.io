@@ -17,9 +17,42 @@
         <h1 class="titleName">Contact Information</h1>
     </div>
     <div class="contactBtnWrapper">
-        <a class="contactBtn" href="mailto:boris.kiril.vasilev@gmail.com">Business Inquiries</a>
-        <a class="contactBtn" href="mailto:bvasilev@uwo.ca">School Inquiries</a>
-        <a class="contactBtn" href="https://www.linkedin.com/in/boris-vasilev-0b1554203">LinkedIn</a>
+        <a class="contactBtn" href="mailto:boris.kiril.vasilev@gmail.com" target="_blank">Business Inquiries</a>
+        <a class="contactBtn" href="mailto:bvasilev@uwo.ca" target="_blank">School Inquiries</a>
+        <a class="contactBtn" href="https://www.linkedin.com/in/boris-vasilev-0b1554203" target="_blank">LinkedIn</a>
     </div>
+    <div class="minikit" onmouseenter="playRing()" onmouseleave="stopRing()" onclick="playCollect()">
+        <img id="minikitImg" class="minikitImg" src="./resources/minikit-spin.gif" alt="minikit" style="opacity: 0%;">
+        <audio id="ringAudio">
+            <source src="./resources/minikit-ring.mp3">
+            Your browser does not support the audio tag.
+        </audio>
+        <audio id="collectAudio">
+            <source src="./resources/minikit-collect.mp3">
+            Your browser does not support the audio tag.
+        </audio>
+    </div>
+    <script>
+        function playRing() {
+            var audio = document.getElementById("ringAudio");
+            audio.loop = true;
+            audio.play();
+
+            var img = document.getElementById("minikitImg");
+            img.style.opacity = 1;
+        }
+
+        function stopRing() {
+            var audio = document.getElementById("ringAudio");
+            audio.loop = false;
+
+            var img = document.getElementById("minikitImg");
+            img.style.opacity = 0;
+        }
+
+        function playCollect() {
+            document.getElementById("collectAudio").play();
+        }
+    </script>
 </body>
 </html>
