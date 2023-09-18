@@ -1,3 +1,9 @@
+:root {
+    font-family: JetBrains Mono;
+    font-size: 22px;
+    --main-fg-color: #d7d7d7;
+}
+
 body {
     background-color: #1F1F1F;
 }
@@ -19,10 +25,149 @@ body {
 }
 
 .topnav a:hover {
-    color: #D7D7D7;
+    color: var(--main-fg-color);
 }
 
 .topnav a.active {
     background-color: #D40000;
-    color: #D7D7D7;
+    color: var(--main-fg-color);
+}
+
+.profileWrapper {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.profilePic {
+    border-radius: 100%;
+    background-color: dimgray;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    max-width: 200px;
+}
+
+.profileName {
+    text-align: center;
+    color: var(--main-fg-color);
+    font-size: 44px;
+}
+
+.profileText {
+    text-align: left;
+    color: var(--main-fg-color);
+    font-size: 20px;
+}
+
+.fadeIn {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+.titlebar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+
+.titleName {
+    text-align: center;
+    color: var(--main-fg-color);
+    font-size: 44px;
+}
+
+.titleText {
+    text-align: left;
+    color: var(--main-fg-color);
+    font-size: 20px;
+}
+
+.github:link {
+    text-decoration: none;
+    color: var(--main-fg-color);
+}
+
+.github:visited {
+    text-decoration: none;
+    color: var(--main-fg-color);
+}
+
+.github:hover {
+    animation: colorCycle 2s infinite;
+}
+
+@keyframes colorCycle {
+    0% { color: red; }
+    20% { color: orange; }
+    40% { color: yellow; }
+    60% { color: greenyellow; }
+    80% { color: blue; }
+    100% { color: blueviolet; }
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+}
+
+.project:hover {
+    background-color: #1b1b1b;
+}
+
+.project p {
+    display: flex;
+    align-items: center;
+    margin: 25px;
+    color: var(--main-fg-color);
+    font-size: 15px;
+}
+
+.project img {
+    width: 40%;
+    height: auto;
+    margin: 25px;
+}
+
+.project video {
+    width: 40%;
+    height: auto;
+    margin: 25px;
+}
+
+.contactBtnWrapper {
+    width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contactBtn {
+    width: 100%;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    border-radius: 25px;
+    padding: 15px;
+    margin: 10px;
+    background-color: #181818;
+    color: #868686;
+}
+
+.contactBtn:hover {
+    background-color: #D40000;
+    color: var(--main-fg-color);
 }

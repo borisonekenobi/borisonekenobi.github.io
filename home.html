@@ -3,14 +3,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>
     <link rel="stylesheet" href="styles.css">
 	<title>Home</title>
 </head>
 <body>
     <div class="topnav">
         <a class="active" href="./home.html">Home</a>
+        <a href="./projects.html">Projects</a>
         <a href="./contact.html">Contact</a>
-        <a href="./about.html">About</a>
     </div>
+    <div class="profileWrapper">
+        <img class="profilePic" src="./resources/me.png" alt="Profile picture">
+        <h1 id="name" class="profileName"></h1>
+        <p class="profileText fadeIn">
+            Hello, I am Boris!
+            <br>
+            I am currently working towards becoming a software engineer! I hope you have a bit of time to spare to look around my portfolio, I've left some easter eggs for you to find :)
+        </p>
+    </div>
+    <script>
+        function appearChars(str, elem, timeBetween) {
+            var index = -1;
+            (function go() {
+                if (++index < str.length) {
+                    elem.innerHTML = elem.innerHTML + str.charAt(index);
+                    setTimeout(go, timeBetween);
+                }
+            })();
+        }
+
+        var str = 'Boris Vasilev';
+        var elem = document.getElementById('name');
+        var timeBetween = 64;
+
+        appearChars(str, elem, timeBetween);
+    </script>
 </body>
 </html>
