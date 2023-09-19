@@ -3,10 +3,27 @@
     font-size: 22px;
     --main-fg-color: #d7d7d7;
     --main-bg-color: #1f1f1f;
+    --scrollbar-bg: var(--main-bg-color);
+	--scrollbar-fg: #555555;
+	--scrollbar-fg-hover: var(--main-fg-color);
 }
 
 body {
     background-color: var(--main-bg-color)
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+	background-color: var(--scrollbar-bg);
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 2.5px;
+	background: var(--scrollbar-fg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--scrollbar-fg-hover);
 }
 
 .topnav {
